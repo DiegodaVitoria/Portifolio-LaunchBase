@@ -1,0 +1,21 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+
+    <div id="info">
+        <img src="{{ about.avatar_Url }}" alt="Diego Carlos">
+        <h1>{{ about.name }}</h1>
+        <h2>{{ about.role }}</h2>
+        <p>{{ about.description }}</p>
+    </div>
+
+    <div id="links-footer" class="links">
+        {% for link in about.links %}
+
+            <a href="{{link.url}}" target="_blank"><i class="{{link.cod}}"></i></a>
+
+        {% endfor %}
+    </div>
+
+{% endblock %}
